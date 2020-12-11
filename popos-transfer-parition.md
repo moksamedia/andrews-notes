@@ -81,3 +81,20 @@ Delete boot item
 ```bash
  efibootmgr -b <item #> -B
 ```
+
+### Recovery Partition
+
+Great tutorial on adding recovery partition: https://baez.link/add-recovery-to-your-pop-_os
+
+Another thread: https://pop-planet.info/forums/threads/missing-recovery-option-on-boot-menu.211/
+
+popos-upgrade utility: https://github.com/pop-os/upgrade
+
+### /boot/efi full
+
+Use `du` to see what is using up all the space. Probably things in the `/EFI` subdir.
+
+Look in `loader/loader.conf` and `loader/entries` to see what entries are being used and not being used.
+
+Delete any unneeded entries and unused subdirectories in `/EFI`
+
