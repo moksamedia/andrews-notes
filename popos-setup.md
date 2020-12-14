@@ -20,4 +20,7 @@ May need to restart?
 ```bash
 flatpak install flathub io.dbeaver.DBeaverCommunity
 ```
+### Apps
+PopShop: 
+- Thunderbird
 
