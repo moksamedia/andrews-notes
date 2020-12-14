@@ -16,6 +16,10 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 ```
 May need to restart?
 
+#### LAMP 
+
+https://www.linuxhelp.com/how-to-install-lamp-on-popos
+
 #### DBeaver
 ```bash
 flatpak install flathub io.dbeaver.DBeaverCommunity
