@@ -1,3 +1,11 @@
 ## Get Tibetan working
-`sudo apt install ibus-m17n`
-`ibus-setup`
+Add iBus m17n:
+```bash
+sudo apt install ibus-m17n
+```
+Will need to restart.
+
+To configure iBus input methods:
+```bash
+ibus-setup
+```
