@@ -150,3 +150,11 @@ https://www.digitalocean.com/community/tutorials/how-to-reset-your-mysql-or-mari
 ```bash
 sudo apt install php-xdebug
 ```
+
+`/etc/php/7.4/mods-available/xdebug.ini`
+```ini
+zend_extension=xdebug.so
+xdebug.remote_enable=1
+xdebug.remote_host=127.0.0.1
+xdebug.remote_port=9000
+```
