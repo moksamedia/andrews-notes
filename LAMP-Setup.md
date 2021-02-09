@@ -17,7 +17,7 @@ Listen 8000
 ```
 ### Manage Users
 
-Can either make apache2 run with my local user by editing `/etc/apache2/apache2.conf` or can keep apache running with `www-data` and change 
+Can either make apache2 run with my local user by editing `/etc/apache2/envvars` or can keep apache running with `www-data` and change 
 permissions of web files and folders. Don't have to change ports if you let apache run as `www-data`.
 
 ```bash
