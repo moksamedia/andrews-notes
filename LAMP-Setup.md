@@ -30,6 +30,11 @@ If keeping apache2 on www-data, add my user to www-data group:
 sudo adduser {username} www-data
 ```
 
+Execute command as `www-data`
+```bash
+sudo -u www-data <the command>
+```
+
 ### Virtual Hosts
 
 Create a virtual host site in `/etc/apache2/sites-available` called learntibetanlanguage.conf
