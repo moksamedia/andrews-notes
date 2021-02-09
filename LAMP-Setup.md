@@ -15,6 +15,23 @@ Listen 8000
     Listen 8443
 </IfModule>
 ```
+### Enable mod_rewrite and allow overrides
+
+Symptom of this is that homepage and admin load but other pages give a 404
+
+```bash
+sudo a2enmod rewrite
+```
+
+`/etc/apache2/apache2.conf`
+```bash
+<Directory /var/www/>
+	Options Indexes FollowSymLinks
+	AllowOverride All  # <-- UPDATE ME
+	Require all granted
+</Directory>
+```
+
 ### Manage Users
 
 Can either make apache2 run with my local user by editing `/etc/apache2/envvars` or can keep apache running with `www-data` and change 
