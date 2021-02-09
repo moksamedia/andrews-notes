@@ -62,3 +62,53 @@ Create a symlink from `/var/www/html` to development location.
 ln -s ~/Development/learntibetanlanguage /var/www/learntibetanlanguage
 chmod o+x var/www/learntibetanlanguage
 ```
+
+### /etc/apache2/sites-available/skbm.conf
+```conf
+<VirtualHost local.skbm:8443>
+
+    SSLEngine on
+    ServerName local.skbm
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html/skbm
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+		SSLCertificateFile      /home/andrewcarterhughes/Development/skbm/local.skbm.crt
+		SSLCertificateKeyFile   /home/andrewcarterhughes/Development/skbm/local.skbm.key
+
+</VirtualHost>
+
+<VirtualHost local.skbm:8000>
+
+    ServerName local.skbm
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html/skbm
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+```
+
+### /etc/apache2/sites-available/phpmyadmin.conf
+```conf
+<VirtualHost phpmyadmin:8000>
+
+        ServerName localhost
+
+        <Directory /usr/share/phpmyadmin>
+                AllowOverride None
+                Require all granted
+        </Directory>
+
+        DocumentRoot /usr/share/phpmyadmin
+
+        Include /etc/phpmyadmin/apache.conf
+
+        ErrorLog ${APACHE_LOG_DIR}/phpmyadmin.error.log
+        CustomLog ${APACHE_LOG_DIR}/phpmyadmin.access.log combined
+
+</VirtualHost>
+```
