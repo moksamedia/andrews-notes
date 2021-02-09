@@ -37,6 +37,8 @@ sudo a2enmod rewrite
 Can either make apache2 run with my local user by editing `/etc/apache2/envvars` or can keep apache running with `www-data` and change 
 permissions of web files and folders. Don't have to change ports if you let apache run as `www-data`.
 
+*Probably better to run apache2 as local user*
+
 ```bash
 chown www-data:www-data  -R * # Let Apache be owner
 find . -type d -exec chmod 755 {} \;  # Change directory permissions rwxr-xr-x
