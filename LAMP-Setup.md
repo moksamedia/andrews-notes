@@ -145,3 +145,8 @@ FLUSH PRIVILEGES;
 
 https://www.digitalocean.com/community/tutorials/how-to-reset-your-mysql-or-mariadb-root-password
 
+### XDebug
+
+```bash
+sudo apt install php-xdebug
+```
