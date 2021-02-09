@@ -112,3 +112,14 @@ chmod o+x var/www/learntibetanlanguage
 
 </VirtualHost>
 ```
+
+### MariaDB Commands
+```bash
+SELECT User,Host,Plugin FROM mysql.user;
+update mysql.user set plugin = 'mysql_native_password' where User='root';
+update user SET PASSWORD=PASSWORD("root") WHERE USER='root';
+FLUSH PRIVILEGES;
+```
+
+https://www.digitalocean.com/community/tutorials/how-to-reset-your-mysql-or-mariadb-root-password
+
