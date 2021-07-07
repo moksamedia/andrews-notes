@@ -28,3 +28,6 @@ flatpak install flathub io.dbeaver.DBeaverCommunity
 PopShop: 
 - Thunderbird
 
+### Fingerprint reader
+https://github.com/uunicorn/python-validity
+
